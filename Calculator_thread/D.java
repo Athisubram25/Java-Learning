@@ -1,10 +1,11 @@
 package Calculator_thread;
 
-public class D 
+public class D extends Thread
 {
-	public int sub() {
+	@Override
+	public void run() {
 		Calculator cal = new Calculator();
 		int d = cal.subtraction(4, 2);
-		return d;
+		System.out.println("Substraction = "+d);
 		}
 }

@@ -1,10 +1,11 @@
 package Calculator_thread;
 
-public class B
+public class B extends Thread
 {
-	public double division() {
+	@Override
+	public void run() {
 		Calculator cal = new Calculator();
 		double b = cal.division(4, 2);
-		return  b;
+		System.out.println("Division = "+b);
 		}
 }

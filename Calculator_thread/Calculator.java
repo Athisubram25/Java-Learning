@@ -1,6 +1,6 @@
 package Calculator_thread;
 
-public class Calculator 
+public class Calculator extends Thread
 {
 	public int add(int a , int b) 
 	{
@@ -17,5 +17,10 @@ public class Calculator
 	public int subtraction(int a , int b)
 	{
 		return a-b;
+	}
+	@Override
+	public void run()
+	{
+		System.out.println(" Calculator started");
 	}
 }

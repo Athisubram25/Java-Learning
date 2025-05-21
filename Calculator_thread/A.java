@@ -1,10 +1,22 @@
 package Calculator_thread;
 
-public class A 
+public class A extends Thread
 {
-	public int add() {
+	@Override
+	public void run()
+	{
+	
 	Calculator cal = new Calculator();
-	int a = cal.add(4, 2);
-	return a;
+	cal.start();
+	try {
+		cal.join();
+		Thread.sleep(2000);
+		int a = cal.add(4, 2);
+		System.out.println("Addition = "+a);
+	}
+	catch (Exception e) {
+		// TODO: handle exception
+		e.printStackTrace();
+	}
 	}
 }

@@ -1,10 +1,11 @@
 package Calculator_thread;
 
-public class C 
+public class C extends Thread
 {
-	public int multiply() {
+	@Override
+	public void run() {
 		Calculator cal = new Calculator();
 		int c = cal.multiplication(4, 2);
-		return c;
+		System.out.println("Multiplication = "+ c);
 		}
 }

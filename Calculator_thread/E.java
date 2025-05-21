@@ -9,23 +9,23 @@ public class E extends Thread
 		try {
 		
 		A add = new A(); 
-		int a = add.add();
-		System.out.println("Addition = "+ a);
+		add.run();
+		add.join();
 		Thread.sleep(2000);
 		
 		B div = new B();
-		double b = div.division();
-		System.out.println("Division = "+ b);
+		div.run();
+		div.join();
 		Thread.sleep(2000);
 		
 		C multiply = new C();
-		int c= multiply.multiply();
-		System.out.println("Multiplication = "+ c);
+		multiply.run();
+		multiply.join();
 		Thread.sleep(2000);
 		
 		D sub = new D();
-		int d = sub.sub();
-		System.out.println("Subtraction = "+ d);
+		sub.run();
+		sub.join();
 		Thread.sleep(2000);
 		} 
 		catch (InterruptedException e) {
