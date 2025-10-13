@@ -17,7 +17,7 @@ public class Array
 		
 		System.out.println("SUM IS "+sum);
 		System.out.println("AVERAGE IS "+avg);
-		
+		System.out.println("..")
 	
 	}
 }
